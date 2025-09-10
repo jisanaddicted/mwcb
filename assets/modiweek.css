@@ -1,0 +1,52 @@
+.modiweek-section * {
+    border: 1px solid black;
+}
+.modiweek-section {
+    width: 100vw;
+    padding-left: 93px;
+}
+.modiweek-section .modiweek-container {
+    height: 558px;
+    width: 100vw;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+.modiweek-section .section-title {
+    height: 45px;
+    font-size: 32px;
+}
+.modiweek-section .card-container {
+    height: 493px;
+    width: 100vw;
+    display: flex;
+    gap: 24px;
+    
+}
+.modiweek-section .card {
+    height: 493px;
+    width: 288px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.modiweek-section .card-title-box {
+    width: 100%;
+    height: 59px;
+    position: relative;
+    
+}
+.modiweek-section .card-title {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    font-size: 16px;
+}
+.modiweek-section .image{
+    width: 288px;
+    height: 426px;
+}
+.modiweek-section .img {
+    height: 100%;
+    width: 100%;
+}

@@ -1,0 +1,76 @@
+
+{{ 'sustainibility.css' | asset_url | stylesheet_tag }}
+
+{% style %}
+.sustainybility-section {
+  {% if section.settings.margin_top != blank %}
+    margin-top: {{ section.settings.margin_top }}px;
+  {% endif %}
+  
+  {% if section.settings.margin_bottom != blank %}
+    margin-bottom: {{ section.settings.margin_bottom }}px;
+  {% endif %}
+  
+  {% if section.settings.banner_image != blank %}
+    background-image: url({{ section.settings.banner_image | image_url }});
+  {% endif %}
+}
+{% endstyle %}
+
+<div class="sustainybility-section">
+  {% if section.settings.banner_text != blank %}
+    <div class="text-box">{{ section.settings.banner_text }}</div>
+  {% endif %}
+  {% if section.settings.button_text != blank %}
+    <div class="button">{{ section.settings.button_text }}</div>
+  {% endif %}
+</div>
+
+{% schema %}
+{
+  "name": "sustain",
+  "settings": [
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 200,
+      "step":2,
+      "unit": "px",
+      "default": 90,
+      "label": "Top margin",
+      "info": "Select top margin"
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 200,
+      "step":2,
+      "unit": "px",
+      "default": 90,
+      "label": "Bottom margin",
+      "info": "Select bottom margin"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Banner image",
+      "info": "Choose your banner image"
+    },
+    {
+      "type": "text",
+      "id": "banner_text",
+      "label": "Banner text",
+      "default":"i love coding"
+      
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default":"Sustainibility"
+    }
+  ]
+}
+{% endschema %}

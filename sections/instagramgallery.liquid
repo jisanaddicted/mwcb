@@ -1,0 +1,129 @@
+{{ 'instagram.css'| asset_url |stylesheet_tag }}
+{% style %}
+
+.instagram-section{
+    margin-top: {{section.settings.margin_top}};
+    margin-bottom:{{section.settings.margin_bottom}} ;
+    width:100vw;
+    
+}
+{% endstyle %}
+
+<div class="instagram-section">
+  <div class="instagram-container">
+    {% if section.settings.section_title != blank %}
+      <div class="section-title">{{ section.settings.section_title }}</div>
+    {% endif %}
+    <div class="card-container">
+      <div class="twocol">
+        <div class="col1">
+          {% if section.settings.col1_img != blank %}
+            <img src="{{ section.settings.col1_img | image_url }}" alt="Instagram image 1">
+          {% else %}
+          <img src="{{ 'instagram.png' | asset_url }}" alt="Instagram image 1">
+            
+          {% endif %}
+        </div>
+        <div class="col2">
+          <div class="row1">
+            <div class="row1-column1">
+              {% if section.settings.row1_col1_img != blank %}
+                <img src="{{ section.settings.row1_col1_img | image_url }}" alt="Instagram image 2">
+              {% else %}
+                <img src="{{ 'instasmall.png' | asset_url }}" alt="Instagram image 1">
+              {% endif %}
+            </div>
+            <div class="row1-column2">
+              {% if section.settings.row1_col2_img != blank %}
+                <img src="{{ section.settings.row1_col2_img | image_url }}" alt="Instagram image 3">
+              {% else %}
+                <img src="{{ 'instasmall.png' | asset_url }}" alt="Instagram image 1">
+              {% endif %}
+            </div>
+          </div>
+          <div class="row2">
+            <div class="row2-column1">
+              {% if section.settings.row2_col1_img != blank %}
+                <img src="{{ section.settings.row2_col1_img | image_url }}" alt="Instagram image 4">
+              {% else %}
+                 <img src="{{ 'instasmall.png' | asset_url }}" alt="Instagram image 1">
+              {% endif %}
+            </div>
+            <div class="row2-column2">
+              {% if section.settings.row2_col2_img != blank %}
+                <img src="{{ section.settings.row2_col2_img | image_url }}" alt="Instagram image 5">
+              {% else %}
+               <img src="{{ 'instasmall.png' | asset_url }}" alt="Instagram image 1">
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "instagramgallery",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Follow us on Instagram"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Margin Top",
+      "default": 40,
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Margin Bottom",
+      "default": 40,
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "unit": "px"
+    },
+    {
+      "type": "image_picker",
+      "id": "col1_img",
+      "label": "Column 1 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "row1_col1_img",
+      "label": "Row 1 - Column 1 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "row1_col2_img",
+      "label": "Row 1 - Column 2 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "row2_col1_img",
+      "label": "Row 2 - Column 1 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "row2_col2_img",
+      "label": "Row 2 - Column 2 Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Instagram Layout",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %}

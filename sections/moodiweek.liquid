@@ -1,0 +1,70 @@
+{{ 'modiweek.css'| asset_url |stylesheet_tag }}
+{% style %}
+
+.modiweek-section{
+    margin-top: {{section.settings.margin_top}};
+    margin-bottom:{{section.settings.margin_bottom}} ;
+    
+}
+
+{% endstyle %}
+<div class="modiweek-section" id="modiweek-section{{section.id}}">
+    <div class="modiweek-container">
+        <div class="section-title">{{section.settings.section-title}}</div>
+        <div class="card-container">
+            <div class="card">
+                <div class="image">
+                    <img src="" alt="">
+                </div>
+                <div class="card-title-box">
+                    <div class="card-title">sunday</div>
+                </div>
+                
+            </div>
+             <div class="card">
+                <div class="image">
+                    <img src="" alt="">
+                </div>
+                <div class="card-title-box">
+                    <div class="card-title">sunday</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+</div>
+{% schema %}
+{
+    "name":"Modiweek",
+    "settings":[
+    {
+        "type":"text",
+        "id":"section-title",
+        "label":"Section-title",
+        "info":"Enter your section title"
+
+    },
+    {
+        "type":"range",
+        "id":"margin_top",
+        "min":0,
+        "max":200,
+        "step":4,
+        "unit":"px",
+        "label":"Margin-top",
+        "default":80
+    },
+    {
+        "type":"range",
+        "id":"margin_bottom",
+        "min":0,
+        "max":200,
+        "step":4,
+        "unit":"px",
+        "label":"Margin-bottom",
+        "default":80
+    }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,67 @@
+{{ 'best-seller.css' | asset_url | stylesheet_tag }}
+<div class="best-seller-section">
+  <div class="section-content-contianer">
+    <div class="section-title">
+      <span class="title">{{section.settings.section_title}}</span>
+      <div class="viewall-btn">{{section.settings.buttontext}}</div>
+    </div>
+    <div class="product-card-slider">
+      {% for block in section.blocks %}
+        {% assign product = all_products[block.settings.product] %}
+        {% if product %}
+          <div class="product-card">
+            <div class="product-image">
+              <img src="{{ product.featured_image | image_url }}" alt="{{ product.title }}">
+            </div>
+            <div class="product-detail">
+              <div class="  product-title-variant">
+                <div class="product-title">{{ product.title }}</div>
+                <div class="product-varient"></div>
+              </div>
+              <div class="product-price">
+                <div class="price">{{ product.price | money }}</div>
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "best-seller",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "section title",
+      "info": "enter your section title"
+    },
+    {
+      "type": "text",
+      "id": "buttontext",
+      "label": "Button-text",
+      "info": "enter your button text"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "product",
+      "type": "product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Choose product",
+          "info": "Choose your new arrival"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+
+

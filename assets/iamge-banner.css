@@ -1,0 +1,32 @@
+.image-banner-section{
+  min-height: 600px;
+  width: 100vw;
+
+}
+.text-content {
+  width: 295px;
+  overflow-wrap: break-word;
+}
+
+.heading {
+  font-size: 34px;
+  font-weight: bold;
+}
+
+.subheading {
+  font-size: 18px;
+  color: #555;
+}
+
+.Button_text {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 184px;
+  height: 40px;
+  font-size: 14px;
+  background-color: #FFFFFF;
+  color: #0C0C0C;
+  text-decoration: none;
+ 
+}

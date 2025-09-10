@@ -1,0 +1,126 @@
+.collection-section{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    
+    width: 100%;
+   
+
+    
+}
+.collection-title{
+    height: 45px;
+    
+
+}
+.collection-title>.title{
+    font-size: 32px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.collection-pics{
+    width: 1224px;
+    height: 1419px;
+    display: flex;
+    gap: 24px;
+    
+}
+.collection-pic-left{
+    width: 600px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+
+
+}
+.collection-pic-right{
+    width: 600px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 144px;
+
+}
+.collection-pic-left>.pic1{
+    height: 518px;
+    width: 100%;
+    position: relative;
+}
+.collection-pic-left>.pic2{
+    height: 837px;
+    width: 100%;
+    position: relative;
+    
+}
+.collection-pic-right>.pic1{
+    width: 100%;
+    height: 840px;
+    position: relative;
+
+
+}
+.collection-pic-right>.pic2{
+    width: 100%;
+    height: 435px;
+    position: relative;
+
+
+}
+
+.collection-pic-left>.pic1>button{
+    height: 40px;
+    width: 185px;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: none;
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+
+}
+.collection-pic-left>.pic2>button{
+    height: 40px;
+    width: 185px;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: none;
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+
+}
+img{
+    
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.collection-pic-right>.pic1>button{
+    height: 40px;
+    width: 185px;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: none;
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+
+}
+.collection-pic-right>.pic2>button{
+    height: 40px;
+    width: 185px;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: none;
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+
+}

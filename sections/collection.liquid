@@ -1,0 +1,107 @@
+{{ 'collection.css' | asset_url | stylesheet_tag }}
+
+<div class="collection-section">
+  <div class="collection-title">
+    <span class="title"></span>
+  </div>
+
+  <div class="collection-pics">
+    <!-- Left Side -->
+    <div class="collection-pic-left">
+      <div class="pic1">
+        {% if section.settings.left_pic_1 != blank %}
+          <img class="collection-image" src="{{ section.settings.left_pic_1 | image_url }}" alt="">
+        {% else %}
+          <img class="collection-image" src="{{ collections[section.settings.collection_left_pic_1].image | image_url }}" alt="">
+        {% endif %}
+        <button>{{ collections[section.settings.collection_left_pic_1].title }}</button>
+      </div>
+
+      <div class="pic2">
+        {% if section.settings.left_pic_2 != blank %}
+          <img src="{{ section.settings.left_pic_2 | image_url }}" alt="">
+        {% else %}
+          <img src="{{ collections[section.settings.collection_left_pic_2].image | image_url }}" alt="">
+        {% endif %}
+        <button>{{ collections[section.settings.collection_left_pic_2].title }}</button>
+      </div>
+    </div>
+
+    <!-- Right Side -->
+    <div class="collection-pic-right">
+      <div class="pic1">
+        {% if section.settings.right_pic_1 != blank %}
+          <img class="collection-image" src="{{ section.settings.right_pic_1 | image_url }}" alt="">
+        {% else %}
+          <img class="collection-image" src="{{ collections[section.settings.collection_right_pic_1].image | image_url }}" alt="">
+        {% endif %}
+        <button>{{ collections[section.settings.collection_right_pic_1].title }}</button>
+      </div>
+
+      <div class="pic2">
+        {% if section.settings.right_pic_2 != blank %}
+          <img class="collection-image" src="{{ section.settings.right_pic_2 | image_url }}" alt="">
+        {% else %}
+          <img class="collection-image" src="{{ collections[section.settings.collection_right_pic_2].image | image_url }}" alt="">
+        {% endif %}
+        <button>{{ collections[section.settings.collection_right_pic_2].title }}</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Featured Collection",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection_left_pic_1",
+      "label": "Choose collection",
+      "info": "You can change image from below schema"
+    },
+    {
+      "type": "collection",
+      "id": "collection_left_pic_2",
+      "label": "Choose collection",
+      "info": "You can change image from below schema"
+    },
+    {
+      "type": "collection",
+      "id": "collection_right_pic_1",
+      "label": "Choose collection",
+      "info": "You can change image from below schema"
+    },
+    {
+      "type": "collection",
+      "id": "collection_right_pic_2",
+      "label": "Choose collection",
+      "info": "You can change image from below schema"
+    },
+    {
+      "type": "image_picker",
+      "id": "left_pic_1",
+      "label": "Choose image",
+      "info": "600x518"
+    },
+    {
+      "type": "image_picker",
+      "id": "left_pic_2",
+      "label": "Choose image",
+      "info": "600x837"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_pic_1",
+      "label": "Choose image",
+      "info": "600x840"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_pic_2",
+      "label": "Choose image",
+      "info": "600x435"
+    }
+  ]
+}
+{% endschema %}

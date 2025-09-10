@@ -1,0 +1,12 @@
+.announcement-bar {
+  background-color: #111;
+  color: #b44343;
+  text-align: center;
+  
+  font-size: clamp(10px, 2vw, 12px);
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

@@ -1,0 +1,37 @@
+.sustainybility-section{
+    width: 100%;
+    min-height: 526px;
+    position: relative;
+    
+}
+.sustainybility-section .text-box{
+    width: 495px;
+    position: absolute;
+    right: 108px;
+    bottom: 95px;
+    font-size: 20px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+
+
+}
+.sustainybility-section .button{
+    height: 40px;
+    width: 183px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 108px;
+    bottom: 43px;
+    background-color: #ffffff;
+    font-size: 14px;
+
+
+}
+.sustainybility-section{
+    object-fit: cover;
+    object-position: center;
+
+}

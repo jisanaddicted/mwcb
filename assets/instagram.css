@@ -1,0 +1,76 @@
+
+
+.instagram-section {
+  width: 100%;             /* ✅ no scrollbar overflow */
+  overflow-x: hidden;      /* safety */
+}
+
+.instagram-container {
+  margin: 0 clamp(15px, calc(15px + 0.1576 * (100vw - 400px)), 108px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.section-title {
+  font-size: 32px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+}
+
+.card-container {
+  width: 100%;
+  max-width: 1224px;       /* ✅ cap the width */
+  margin: 0 auto;
+  border: 1px solid black; /* optional for testing */
+}
+
+.twocol {
+  display: flex;
+  flex-wrap: wrap;         /* ✅ stack on small screens */
+  gap: 10px;
+}   
+
+/* Left column (big image) */
+.col1 {
+  flex: 1 1 50%;           /* grow/shrink, base 50% */
+  min-width: 300px;        /* don’t shrink too far */
+  aspect-ratio: 4 / 5;     /* keeps proportional height */
+}
+
+/* Right column (4 smaller images) */
+.col2 {
+  flex: 1 1 50%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Top and bottom rows inside col2 */
+.row1, .row2 {
+  display: flex;
+  flex: 1;
+  gap: 10px;
+}
+
+/* Each small square */
+.row1-column1,
+.row1-column2,
+.row2-column1,
+.row2-column2 {
+  flex: 1;
+  aspect-ratio: 1 / 1;     /* square images */
+}
+
+/* Images */
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* ✅ no distortion */
+  object-position: center;
+  display: block;
+}
+
+
