@@ -2,14 +2,18 @@
 
 .instagram-section {
   width: 100%;             /* ✅ no scrollbar overflow */
-  overflow-x: hidden;      /* safety */
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
 }
+        
 
 .instagram-container {
   margin: 0 clamp(15px, calc(15px + 0.1576 * (100vw - 400px)), 108px);
   display: flex;
   flex-direction: column;
   gap: 24px;
+  flex: 1;
 }
 
 .section-title {
@@ -21,38 +25,40 @@
 
 .card-container {
   width: 100%;
-  max-width: 1224px;       /* ✅ cap the width */
-  margin: 0 auto;
+         
+  
   border: 1px solid black; /* optional for testing */
 }
 
 .twocol {
   display: flex;
-  flex-wrap: wrap;         /* ✅ stack on small screens */
-  gap: 10px;
+  flex-wrap: wrap;
+  flex: 1;         /* ✅ stack on small screens */
+  
 }   
 
 /* Left column (big image) */
 .col1 {
-  flex: 1 1 50%;           /* grow/shrink, base 50% */
-  min-width: 300px;        /* don’t shrink too far */
-  aspect-ratio: 4 / 5;     /* keeps proportional height */
+  flex: 1 ;           /* grow/shrink, base 50% */
+         /* don’t shrink too far */
+  aspect-ratio: 1 / 1;     /* keeps proportional height */
 }
 
 /* Right column (4 smaller images) */
 .col2 {
-  flex: 1 1 50%;
-  min-width: 300px;
+  flex: 1 ;
+  height: 100%;
+  
   display: flex;
   flex-direction: column;
-  gap: 10px;
+ 
 }
 
 /* Top and bottom rows inside col2 */
 .row1, .row2 {
   display: flex;
   flex: 1;
-  gap: 10px;
+  
 }
 
 /* Each small square */
@@ -72,5 +78,21 @@ img {
   object-position: center;
   display: block;
 }
+@media (max-width:780px){
+  .col1{
+    display: none;
 
+  }
+  .section-title{
+    font-size:20px;
+
+  }
+  .instagram-container {
+  
+    gap: 8px;
+  
+}
+
+
+}
 
