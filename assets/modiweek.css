@@ -1,6 +1,4 @@
-.modiweek-section * {
-    border: 1px solid black;
-}
+
 .modiweek-section {
     width: 100vw;
     padding-left: 93px;
@@ -16,19 +14,22 @@
     height: 45px;
     font-size: 32px;
 }
-.modiweek-section .card-container {
+.modiweek-section .modi-card-container{
     height: 493px;
+    white-space: nowrap;   /* keeps items on the same line */
+    overflow-x: auto;      /* enables horizontal scroll */
+    margin-left: 24px;
     width: 100vw;
-    display: flex;
-    gap: 24px;
+    
     
 }
 .modiweek-section .card {
+    display: inline-block;  /* makes each card inline horizontally */
+    vertical-align: top;    /* aligns cards to the top */
     height: 493px;
     width: 288px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    margin-right: 20px; 
+    overflow-x: auto;   
 }
 .modiweek-section .card-title-box {
     width: 100%;
@@ -43,10 +44,23 @@
     font-size: 16px;
 }
 .modiweek-section .image{
-    width: 288px;
-    height: 426px;
+    aspect-ratio:288/426;
 }
-.modiweek-section .img {
+.modiweek-section img { 
     height: 100%;
     width: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+
+}
+.slider-box{
+    width: 3000px;
+}
+.modiweek-section .modi-card-container::-webkit-scrollbar {
+    display: none;
+}
+.modiweek-section .modi-card-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
 }

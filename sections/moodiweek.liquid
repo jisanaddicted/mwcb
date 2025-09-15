@@ -8,29 +8,87 @@
 }
 
 {% endstyle %}
+{% assign product = all_products[section.settings.featured_product]%}
+{% assign product1 = all_products[section.settings.featured_product1]%}
+{% assign product2 = all_products[section.settings.featured_product2]%}
+{% assign product3= all_products[section.settings.featured_product3]%}
+{% assign product4 = all_products[section.settings.featured_product4]%}
+{% assign product5 = all_products[section.settings.featured_product5]%}
+{% assign product6 = all_products[section.settings.featured_product6]%}
 <div class="modiweek-section" id="modiweek-section{{section.id}}">
     <div class="modiweek-container">
         <div class="section-title">{{section.settings.section-title}}</div>
-        <div class="card-container">
+        <div class="slider-box">
+            <div class="modi-card-container">
             <div class="card">
                 <div class="image">
-                    <img src="" alt="">
+                    <img src="{{ product.featured_image | image_url }}" alt="product-image">
                 </div>
                 <div class="card-title-box">
-                    <div class="card-title">sunday</div>
+                    <div class="card-title">Saturday</div>
                 </div>
                 
             </div>
-             <div class="card">
+            <div class="card">
                 <div class="image">
-                    <img src="" alt="">
+                    <img src="{{ product1.featured_image | image_url }}" alt="product-image1">
                 </div>
                 <div class="card-title-box">
-                    <div class="card-title">sunday</div>
+                    <div class="card-title">Sunday</div>
                 </div>
                 
             </div>
+            <div class="card">
+                <div class="image">
+                    <img src="{{ product2.featured_image | image_url }}" alt="product-image2">
+                </div>
+                <div class="card-title-box">
+                    <div class="card-title">Monday</div>
+                </div>
+                
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="{{ product3.featured_image | image_url}}" alt="product-image3">
+                </div>
+                <div class="card-title-box">
+                    <div class="card-title">Tuestday</div>
+                </div>
+                
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="{{ product4.featured_image | image_url }}" alt="product4">
+                </div>
+                <div class="card-title-box">
+                    <div class="card-title">Wednestday</div>
+                </div>
+                
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="{{ product5.featured_image | image_url }}" alt="product4">
+                </div>
+                <div class="card-title-box">
+                    <div class="card-title">Thurstday</div>
+                </div>
+                
+            </div>
+            <div class="card">
+                <div class="image">
+                    <img src="{{ product6.featured_image | image_url }}" alt="product4">
+                </div>
+                <div class="card-title-box">
+                    <div class="card-title">Friday</div>
+                </div>
+                
+            </div>
+            
+
         </div>
+
+        </div>
+        
     </div>
 
 </div>
@@ -64,6 +122,41 @@
         "unit":"px",
         "label":"Margin-bottom",
         "default":80
+    },
+    {
+        "type":"product",
+        "id":"featured_product",
+        "label":"chose a product"
+    },
+    {
+        "type":"product",
+        "id":"featured_product1",
+        "label":"chose a product"
+    },
+    {
+        "type":"product",
+        "id":"featured_product2",
+        "label":"chose a product"
+    },
+    {
+        "type":"product",
+        "id":"featured_product3",
+        "label":"chose a product"
+    },
+    {
+        "type":"product",
+        "id":"featured_product4",
+        "label":"chose a product"
+    },
+    {
+        "type":"product",
+        "id":"featured_product5",
+        "label":"chose a product"
+    },
+    {
+        "type":"product",
+        "id":"featured_product6",
+        "label":"chose a product"
     }
     ]
 }
