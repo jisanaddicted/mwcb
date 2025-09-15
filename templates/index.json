@@ -23,7 +23,11 @@
     },
     "instagramgallery":{
       "type":"instagramgallery"
+    },
+    "footer":{
+      "type":"footer"
     }
+
   },
   "order": [
     "announcement-bar",
@@ -33,6 +37,7 @@
     "collection",
     "moodiweek",
     "sustain",
-    "instagramgallery"
+    "instagramgallery",
+    "footer"
   ]
 }
