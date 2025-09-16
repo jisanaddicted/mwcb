@@ -22,7 +22,11 @@
             <div class="modi-card-container">
             <div class="card">
                 <div class="image">
+                    {% if product.featured_image != blank %}
                     <img src="{{ product.featured_image | image_url }}" alt="product-image">
+                    {% else %}
+                    <img src="{{ 'images.jpg' | asset_url }}" alt="product-image">
+                    {% endif %}
                 </div>
                 <div class="card-title-box">
                     <div class="card-title">Saturday</div>
@@ -31,7 +35,12 @@
             </div>
             <div class="card">
                 <div class="image">
+                   
+                    {% if product.featured_image != blank %}
                     <img src="{{ product1.featured_image | image_url }}" alt="product-image1">
+                    {% else %}
+                    <img src="{{ 'images.jpg' | asset_url }}" alt="product-image">
+                    {% endif %}
                 </div>
                 <div class="card-title-box">
                     <div class="card-title">Sunday</div>
@@ -40,7 +49,12 @@
             </div>
             <div class="card">
                 <div class="image">
+                    
+                    {% if product.featured_image != blank %}
                     <img src="{{ product2.featured_image | image_url }}" alt="product-image2">
+                    {% else %}
+                    <img src="{{ 'images.jpg' | asset_url }}" alt="product-image">
+                    {% endif %}
                 </div>
                 <div class="card-title-box">
                     <div class="card-title">Monday</div>
@@ -49,7 +63,12 @@
             </div>
             <div class="card">
                 <div class="image">
+                    
+                    {% if product.featured_image != blank %}
                     <img src="{{ product3.featured_image | image_url}}" alt="product-image3">
+                    {% else %}
+                    <img src="{{ 'images.jpg' | asset_url }}" alt="product-image">
+                    {% endif %}
                 </div>
                 <div class="card-title-box">
                     <div class="card-title">Tuestday</div>
@@ -58,7 +77,12 @@
             </div>
             <div class="card">
                 <div class="image">
+                    
+                    {% if product.featured_image != blank %}
                     <img src="{{ product4.featured_image | image_url }}" alt="product4">
+                    {% else %}
+                    <img src="{{ 'images.jpg' | asset_url }}" alt="product-image">
+                    {% endif %}
                 </div>
                 <div class="card-title-box">
                     <div class="card-title">Wednestday</div>
@@ -67,7 +91,12 @@
             </div>
             <div class="card">
                 <div class="image">
+                    
+                    {% if product.featured_image != blank %}
                     <img src="{{ product5.featured_image | image_url }}" alt="product4">
+                    {% else %}
+                    <img src="{{ 'images.jpg' | asset_url }}" alt="product-image">
+                    {% endif %}
                 </div>
                 <div class="card-title-box">
                     <div class="card-title">Thurstday</div>
@@ -76,7 +105,12 @@
             </div>
             <div class="card">
                 <div class="image">
-                    <img src="{{ product6.featured_image | image_url }}" alt="product4">
+                    
+                    {% if product.featured_image != blank %}
+                    <img src="{{ product6.featured_image | image_url }}" alt="product6">
+                    {% else %}
+                    <img src="{{ 'images.jpg' | asset_url }}" alt="product-image">
+                    {% endif %}
                 </div>
                 <div class="card-title-box">
                     <div class="card-title">Friday</div>

@@ -10,18 +10,24 @@
     <div class="collection-pic-left">
       <div class="pic1">
         {% if section.settings.left_pic_1 != blank %}
-          <img class="collection-image" src="{{ section.settings.left_pic_1 | image_url }}" alt="">
+        <img class="collection-image" src="{{ section.settings.left_pic_1 | image_url }}" alt="">
+        {% elsif collections[section.settings.collection_left_pic_1].image != blank %}
+        <img class="collection-image" src="{{ collections[section.settings.collection_left_pic_1].image | image_url }}"
+          alt="">
         {% else %}
-          <img class="collection-image" src="{{ collections[section.settings.collection_left_pic_1].image | image_url }}" alt="">
+        <img class="collection-image" src="{{ 'images.jpg' | asset_url }}" alt="">
+
         {% endif %}
         <button>{{ collections[section.settings.collection_left_pic_1].title }}</button>
       </div>
 
       <div class="pic2">
         {% if section.settings.left_pic_2 != blank %}
-          <img src="{{ section.settings.left_pic_2 | image_url }}" alt="">
+        <img src="{{ section.settings.left_pic_2 | image_url }}" alt="">
+        {% elsif collections[section.settings.collection_left_pic_2].image != blank %}
+        <img src="{{ collections[section.settings.collection_left_pic_2].image | image_url }}" alt="">
         {% else %}
-          <img src="{{ collections[section.settings.collection_left_pic_2].image | image_url }}" alt="">
+        <img src="{{ 'images.jpg' | asset_url }}" alt="">
         {% endif %}
         <button>{{ collections[section.settings.collection_left_pic_2].title }}</button>
       </div>
@@ -31,23 +37,31 @@
     <div class="collection-pic-right">
       <div class="pic1">
         {% if section.settings.right_pic_1 != blank %}
-          <img class="collection-image" src="{{ section.settings.right_pic_1 | image_url }}" alt="">
+        <img class="collection-image" src="{{ section.settings.right_pic_1 | image_url }}" alt="">
+        {% elsif collections[section.settings.collection_right_pic_1].image != blank %}
+        <img class="collection-image" src="{{ collections[section.settings.collection_right_pic_1].image | image_url }}"
+          alt="">
         {% else %}
-          <img class="collection-image" src="{{ collections[section.settings.collection_right_pic_1].image | image_url }}" alt="">
+        <img class="collection-image" src="{{ 'images.jpg' | asset_url }}" alt="">
         {% endif %}
         <button>{{ collections[section.settings.collection_right_pic_1].title }}</button>
       </div>
 
       <div class="pic2">
         {% if section.settings.right_pic_2 != blank %}
-          <img class="collection-image" src="{{ section.settings.right_pic_2 | image_url }}" alt="">
+        <img class="collection-image" src="{{ section.settings.right_pic_2 | image_url }}" alt="">
+        {% elsif collections[section.settings.collection_right_pic_2].image != blank %}
+        <img class="collection-image" src="{{ collections[section.settings.collection_right_pic_2].image | image_url }}"
+          alt="">
         {% else %}
-          <img class="collection-image" src="{{ collections[section.settings.collection_right_pic_2].image | image_url }}" alt="">
+        <img class="collection-image" src="{{ 'images.jpg' | asset_url }}" alt="">
         {% endif %}
         <button>{{ collections[section.settings.collection_right_pic_2].title }}</button>
       </div>
     </div>
+
   </div>
+</div>
 </div>
 
 {% schema %}
