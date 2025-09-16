@@ -6,11 +6,12 @@
 
 {%- endif -%}
 
+
 <section class="nav-bar">
   <div class="logoplushamburg">
     <div class="hamplussearch">
       <img class="hamburger-icon" src="{{ 'Headermenuicon.png' | asset_url }}" alt="Headermenuicon">
-      <img class="search-icon" src="{{ 'Headersearchicon.png' | asset_url }}" alt="search icon">
+      <img class="search-icon search-click-event" src="{{ 'Headersearchicon.png' | asset_url }}" alt="search icon">
 
     </div>
 
@@ -51,7 +52,7 @@
   </div>
 
   <div class="header-actions">
-    <img class="search-icon2" src="{{ 'Headersearchicon.png' | asset_url }}" alt="search icon">
+    <img class="search-icon2 search-click-event" src="{{ 'Headersearchicon.png' | asset_url }}" alt="search icon">
     <img class="profile-icon" src="{{ 'Headerprofileicon.png' | asset_url }}" alt="profile icon">
     <img class="favourite-icon" src="{{ 'Headerfavoriteicon.png' | asset_url }}" alt="favourite icon">
     <img class="bag-icon" src="{{ 'Headerbagicon.png' | asset_url }}" alt="bag icon">
@@ -120,6 +121,14 @@
       </div>
     </div>
   </div>
+</div>
+<div class="overlay22">
+  <div class="search-block">
+      <div class="search-bar">
+        <div class="search-icon"></div>
+        <input class="search-input" type="text" placeholder="Search" />
+      </div>
+    </div>
 </div>
 
 

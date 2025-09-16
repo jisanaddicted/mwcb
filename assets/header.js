@@ -43,4 +43,16 @@ document.querySelectorAll(".links").forEach(link => {
 document.querySelector(".overlay").addEventListener("mouseleave", () => {
   document.querySelectorAll(".overlay").forEach(o => o.style.display = "none");
 });
+//search icon clicking evenactivites written here
+
+let searchiconEls=document.querySelectorAll(".search-click-event")
+let overlay2El=document.querySelector(".overlay22")
+searchiconEls.forEach(searchiconEl =>{
+  searchiconEl.addEventListener("click",()=>{
+  overlay2El.style.display="block";
+
+})
+
+  
+})
 

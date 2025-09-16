@@ -5,6 +5,7 @@
 
 
   display: flex;
+
   justify-content: space-between;
   box-sizing: border-box;
   position: relative;
@@ -13,6 +14,7 @@
 
 .search-icon {
   display: none;
+  cursor: pointer;
 }
 
 .hamplussearch {
@@ -29,15 +31,18 @@
 @media(max-width:500px) {
   .search-icon {
     display: block;
+    cursor: pointer;
   }
 
   .search-icon2 {
     display: none;
+    cursor: pointer;
 
   }
 
   .profile-icon {
     display: none;
+    cursor: pointer;
   }
 
   .visibility2 {
@@ -145,6 +150,7 @@
 .header-actions img {
   height: 24px;
   width: 24px;
+  cursor: pointer;
 }
 
 .hamburger-icon {
@@ -158,6 +164,7 @@
 @media (max-width: 990px) {
   .hamburger-icon {
     display: block;
+    cursor: pointer;
     /* or flex if you want 3 lines stacked */
   }
 
@@ -260,6 +267,7 @@
   gap: 54px;
   flex-wrap: wrap;
   z-index: 1000;
+  background-color: white;
 }
 .mega-dropdown>div {
   margin-top: 32px;
@@ -324,3 +332,48 @@
   width: 288px;
   object-position: center;
 }
+/* search-bar css started from here*/
+
+.overlay22{
+  display: none;
+  position: relative;
+  z-index: 999;
+}
+.search-block {
+  width: 100vw;
+  height: 152px;
+  padding: 32px 108px 64px 108px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: white;
+}
+.search-bar {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+.search-icon {
+  height: 24px;
+  width: 24px;
+  flex-shrink: 0;
+  background-color: gray;
+}
+.search-input {
+  flex-grow: 1;
+  height: 100%;
+  border: none;
+  font-size: 20px;
+
+  box-sizing: border-box;
+}
+.search-input::placeholder {
+  font-size: 20px;
+}
+.search-input:focus {
+  outline: none; /* removes the default blue border */
+  border: none; /* makes sure no border shows */
+}
+

@@ -1,7 +1,7 @@
 
 .modiweek-section {
     width: 100vw;
-    padding-left: 93px;
+    padding-left: clamp(15px, calc(15px + 0.1576 * (100vw - 400px)), 108px);
 }
 .modiweek-section .modiweek-container {
     height: 558px;
@@ -18,7 +18,7 @@
     height: 493px;
     white-space: nowrap;   /* keeps items on the same line */
     overflow-x: auto;      /* enables horizontal scroll */
-    margin-left: 24px;
+    
     width: 100vw;
     
     
@@ -54,9 +54,7 @@
     display: block;
 
 }
-.slider-box{
-    width: 3000px;
-}
+
 .modiweek-section .modi-card-container::-webkit-scrollbar {
     display: none;
 }

@@ -7,7 +7,7 @@
 .sustainybility-section .text-box{
     width: 495px;
     position: absolute;
-    right: 108px;
+    right:  clamp(15px, calc(15px + 0.1576 * (100vw - 400px)), 108px);
     bottom: 95px;
     font-size: 20px;
     overflow-wrap: break-word;
@@ -23,7 +23,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    right: 108px;
+    right:  clamp(15px, calc(15px + 0.1576 * (100vw - 400px)), 108px);
     bottom: 43px;
     background-color: #ffffff;
     font-size: 14px;
@@ -33,5 +33,28 @@
 .sustainybility-section{
     object-fit: cover;
     object-position: center;
+
+}
+@media (max-width:780px) {
+    .sustainybility-section .text-box {
+
+        bottom: 88px;
+        font-size: 14px;
+        width: 318px;
+
+
+
+
+    }
+
+    .sustainybility-section .button {
+
+
+        bottom: 16px;
+        width: 152px;
+        height: 40px;
+
+
+    }
 
 }

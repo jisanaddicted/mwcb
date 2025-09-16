@@ -2,7 +2,7 @@
 
 <div class="collection-section">
   <div class="collection-title">
-    <span class="title"></span>
+    <span class="title">{{section.settings.collection_title}}</span>
   </div>
 
   <div class="collection-pics">
@@ -18,7 +18,7 @@
         <img class="collection-image" src="{{ 'images.jpg' | asset_url }}" alt="">
 
         {% endif %}
-        <button>{{ collections[section.settings.collection_left_pic_1].title }}</button>
+        <button class="pic-button">{{ collections[section.settings.collection_left_pic_1].title }}</button>
       </div>
 
       <div class="pic2">
@@ -29,7 +29,7 @@
         {% else %}
         <img src="{{ 'images.jpg' | asset_url }}" alt="">
         {% endif %}
-        <button>{{ collections[section.settings.collection_left_pic_2].title }}</button>
+        <button class="pic-button">{{ collections[section.settings.collection_left_pic_2].title }}</button>
       </div>
     </div>
 
@@ -44,7 +44,7 @@
         {% else %}
         <img class="collection-image" src="{{ 'images.jpg' | asset_url }}" alt="">
         {% endif %}
-        <button>{{ collections[section.settings.collection_right_pic_1].title }}</button>
+        <button class="pic-button">{{ collections[section.settings.collection_right_pic_1].title }}</button>
       </div>
 
       <div class="pic2">
@@ -56,7 +56,7 @@
         {% else %}
         <img class="collection-image" src="{{ 'images.jpg' | asset_url }}" alt="">
         {% endif %}
-        <button>{{ collections[section.settings.collection_right_pic_2].title }}</button>
+        <button class="pic-button">{{ collections[section.settings.collection_right_pic_2].title }}</button>
       </div>
     </div>
 
@@ -68,6 +68,13 @@
 {
   "name": "Featured Collection",
   "settings": [
+  {
+    "type":"text",
+    "id":"collection_title",
+    "label":"Collection title",
+    "default":"Featured collection"
+
+  },
     {
       "type": "collection",
       "id": "collection_left_pic_1",

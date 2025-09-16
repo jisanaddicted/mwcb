@@ -13,6 +13,9 @@
   
   {% if section.settings.banner_image != blank %}
     background-image: url({{ section.settings.banner_image | image_url }});
+  {% else %}
+    background-image: url({{ 'Hero-Banner-Placeholder-Light-2500x1172-1.png'| asset_url }});
+    
   {% endif %}
 }
 {% endstyle %}
@@ -62,7 +65,7 @@
       "type": "text",
       "id": "banner_text",
       "label": "Banner text",
-      "default":"i love coding"
+      "default":"Stylish sustainability in clothing promotes eco-friendly choices for a greater future"
       
     },
     {
