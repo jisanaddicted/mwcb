@@ -1,0 +1,11 @@
+{
+    "sections":{
+        "firstone":{
+            "type":"singuppage"
+        }
+    },
+    "order":[
+        "firstone"
+    ]
+
+}

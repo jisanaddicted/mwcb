@@ -47,13 +47,13 @@
 
   <div class="nav-links">
     {% for link in linklists[section.settings.header_menu].links %}
-     <a class="links" data-index="{{forloop.index}}" href="{{ link.url }}">{{ link.title }}</a>
+    <a class="links" data-index="{{forloop.index}}" href="{{ link.url }}">{{ link.title }}</a>
     {% endfor %}
   </div>
 
   <div class="header-actions">
     <img class="search-icon2 search-click-event" src="{{ 'Headersearchicon.png' | asset_url }}" alt="search icon">
-    <img class="profile-icon" src="{{ 'Headerprofileicon.png' | asset_url }}" alt="profile icon">
+    <a href="pages/singuppage"><img class="profile-icon" src="{{ 'Headerprofileicon.png' | asset_url }}" alt="profile icon"></a>
     <img class="favourite-icon" src="{{ 'Headerfavoriteicon.png' | asset_url }}" alt="favourite icon">
     <img class="bag-icon" src="{{ 'Headerbagicon.png' | asset_url }}" alt="bag icon">
 
@@ -102,21 +102,21 @@
 
       <div class="collection1">
         {% if collection.image != blank %}
-         <img src="{{ collection.image | image_url: width:290,height:460,crop:'center' }}" alt="{{ collection.title }}">
+        <img src="{{ collection.image | image_url: width:290,height:460,crop:'center' }}" alt="{{ collection.title }}">
         {% endif %}
 
         {% if collection.title != blank %}
-         <span class="collection1-title">{{ collection.title }}</span>
+        <span class="collection1-title">{{ collection.title }}</span>
         {% endif %}
       </div>
 
       <div class="collection2">
-       {% if collection2.image != blank %} 
+        {% if collection2.image != blank %}
         <img src="{{  collection2.image | image_url: width:290,height:460,crop:'center'}}" alt="{{collection2.title}}">
-       {% endif %}
-       {% if collection.title != blank %}
+        {% endif %}
+        {% if collection.title != blank %}
         <span class="collection2-title">{{collection2.title}}</span>
-       {% endif %}
+        {% endif %}
 
       </div>
     </div>
@@ -124,11 +124,13 @@
 </div>
 <div class="overlay22">
   <div class="search-block">
-      <div class="search-bar">
-        <div class="search-icon"></div>
-        <input class="search-input" type="text" placeholder="Search" />
-      </div>
-    </div>
+    <form action="/search" method="get" role="search" class="search-bar">
+      <div class="search-icon"><img class="search-image" src="{{ 'search.png' | asset_url}}" alt=""></div>
+      <input class="search-input" type="search" name="q" placeholder="Search products..." aria-label="Search">
+      <input type="hidden" name="type" value="product">
+    </form>
+
+  </div>
 </div>
 
 
@@ -144,39 +146,39 @@
 
 {% schema %}
 {
-  "name": "Header",
-  "settings": [
-    {
-      "type": "image_picker",
-      "id": "logo_image",
-      "label": "Logo Image",
-      "info": "184x100 px"
-    },
-    {
-      "type": "link_list",
-      "id": "header_menu",
-      "label": "Select Menu",
-      "info": "Add your header menu",
-      "default": "main-menu"
-    },
-    {
-      "type": "font_picker",
-      "id": "brand_title",
-      "label": "Brand title font",
-      "default": "work_sans_n7"
-    },
-    {
-      "type": "collection",
-      "id": "featured_collection",
-      "label": "Select a Collection",
-      "info": "Choose a collection to display mega menu"
-    },
-    {
-      "type":"collection",
-      "id":"mega_menu_collection",
-      "label":"Mega Menu Collection",
-      "info":"Choose a collection to display in mega menu"
-    }
-  ]
+"name": "Header",
+"settings": [
+{
+"type": "image_picker",
+"id": "logo_image",
+"label": "Logo Image",
+"info": "184x100 px"
+},
+{
+"type": "link_list",
+"id": "header_menu",
+"label": "Select Menu",
+"info": "Add your header menu",
+"default": "main-menu"
+},
+{
+"type": "font_picker",
+"id": "brand_title",
+"label": "Brand title font",
+"default": "work_sans_n7"
+},
+{
+"type": "collection",
+"id": "featured_collection",
+"label": "Select a Collection",
+"info": "Choose a collection to display mega menu"
+},
+{
+"type":"collection",
+"id":"mega_menu_collection",
+"label":"Mega Menu Collection",
+"info":"Choose a collection to display in mega menu"
+}
+]
 }
 {% endschema %}

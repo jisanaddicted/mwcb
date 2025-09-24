@@ -1,0 +1,286 @@
+.singup-section * {
+  box-sizing: border-box;
+  
+}
+
+.singup-section {
+  width: 100%;
+}
+.image-signupform-container {
+  margin-top: 32px;
+  margin-bottom: 48px;
+
+  width: 100%;
+  padding: 0 clamp(20px, calc(0.084615 * (100vw - 400px) + 20px), 108px);
+  position: relative;
+  display: flex;
+}
+.image-box {
+  height: 837px;
+  width: 600px;
+  flex: 1;
+}
+.image-box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.singup-box {
+  width: 393px;
+  height: 534px;
+
+  margin-top: 121px;
+  margin-right: 103px;
+  flex: 1;
+  margin-left: 128px;
+}
+/*singup box start from here */
+.create-account {
+  width: 100%;
+  height: 49px;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.singup-form {
+  width: 100%;
+  height: 240px;
+  margin-top: 32px;
+}
+.singup-form .div {
+  width: 100%;
+  height: 40px;
+}
+.divm {
+  margin-top: 8px;
+  border: 1px solid black;
+}
+.singup-form input {
+  width: calc(100% - 32px);
+  height: 22px;
+  margin: 9px 16px;
+  border: none;
+}
+.singup-form input::placeholder {
+  font-size: 12px;
+}
+
+.register-button {
+  height: 40px;
+  width: 100%;
+  font-size: 14px;
+  margin-top: 16px;
+  border: none;
+  background-color: #5a6d57;
+  cursor: pointer;
+}
+.login-box {
+  height: 40px;
+  width: 285px;
+
+  margin: 0 auto;
+  margin-top: 8px;
+
+  display: flex;
+}
+.alreadyhaveaccount {
+  font-size: 14px;
+  height: 25px;
+  width: 187px;
+  margin: 7.5px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login a {
+  width: 98px;
+  height: 40px;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #748c70;
+  text-decoration: none;
+}
+.login {
+  width: 98px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.or {
+  height: 22px;
+  width: 15px;
+  font-size: 12px;
+  margin: 0 auto;
+  margin-top: 16px;
+}
+.loginbyathority {
+  width: 139px;
+  height: 35px;
+  display: flex;
+  gap: 17px;
+  margin: 0 auto;
+  margin-top: 24px;
+}
+.authority {
+  height: 35px;
+  width: 35px;
+}
+.authority img {
+  height: 100%;
+  width: 100%;
+}
+.termandcondition {
+  height: 44px;
+  width: 392px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  margin: 0 auto;
+  margin-top: 24px;
+}
+.status{
+  display: none;
+}
+/* Tablet breakpoint: 780px – 1200px */
+@media (min-width: 781px) and (max-width: 1200px) {
+  .image-signupform-container {
+    padding: 0 40px; /* less horizontal padding */
+    gap: 40px; /* reduce spacing between image and form */
+  }
+
+  .image-box {
+    width: 400px;
+    height: 600px; /* scaled down */
+  }
+
+  .singup-box {
+    width: 320px;
+    height: auto; /* let it adapt */
+    margin: 80px 40px 0 40px; /* shrink margins */
+  }
+
+  .create-account {
+    font-size: 24px;
+    height: 40px;
+  }
+
+  .singup-form {
+    margin-top: 24px;
+  }
+
+  .singup-form input {
+    height: 20px;
+    width: calc(100% - 24px);
+    margin: 6px 12px;
+  }
+
+  .register-button {
+    height: 36px;
+    font-size: 13px;
+  }
+
+  .alreadyhaveaccount,
+  .login a {
+    font-size: 13px;
+  }
+
+  .or {
+    font-size: 11px;
+    margin-top: 12px;
+  }
+
+  .loginbyathority {
+    margin-top: 20px;
+    gap: 12px;
+  }
+
+  .authority {
+    width: 30px;
+    height: 30px;
+  }
+
+  .termandcondition {
+    width: 90%;
+    font-size: 11px;
+    text-align: center;
+    margin-top: 16px;
+  }
+}
+@media (max-width: 780px) {
+  
+  .status2{
+    display: none;
+  }
+  .image-signupform-container {
+    margin-top: 33px;
+    margin-bottom: 24px;
+    width: 100%;
+    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+.image-box {
+  height: 218px;
+  width: 100%;
+  flex: unset;
+  
+}
+.singup-box {
+  --total-padding:--total-padding: calc(clamp(20px, calc(20px + 0.0789 * (100vw - 400px)), 50px) * 2);
+  width: calc(100% - var(--total-padding));
+  height: 486px;
+  margin-top: 23px;
+  margin-right: clamp(20px, calc(20px + 0.0789 * (100vw - 400px)), 50px);
+  
+  margin-left: clamp(20px, calc(20px + 0.0789 * (100vw - 400px)), 50px);
+}
+.termandcondition {
+  width: 90%;
+  font-size: 10px;
+  text-align: center;
+  margin-top: 16px;
+  height: 28px;
+}
+.create-account {
+  height: 22px;
+  font-size: clamp(16px, calc(16px + 0.0211 * (100vw - 400px)), 24px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+.singup-form {
+  width: 100%;
+  
+  margin-top: 32px;
+}
+.status{
+  display: revert;
+}
+.login-box2 {
+  
+  
+  display: flex;
+}
+.or2 {
+  
+  display: flex;
+}
+.loginbyathority2 {
+  display: flex;
+
+}
+.termandcondition2{
+  display: flex;
+  
+}

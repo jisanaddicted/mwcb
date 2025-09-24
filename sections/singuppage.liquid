@@ -1,0 +1,70 @@
+{{ 'signuppage.css' | asset_url | stylesheet_tag}}
+<div class="singup-section">
+  <div class="image-signupform-container">
+    <div class="image-box">
+      <img src="{{ section.settings.singup-image | image_url}}" alt="image">
+    </div>
+    <div class="singup-box">
+      <div class="create-account">Create Account</div>
+      <form class="singup-form" action="submit">
+        <div class="divm">
+          <input name="customer[first_name]" class="first-name" type="text" placeholder="first name" required />
+        </div>
+        <div class="divm">
+          <input name="customer[last_name]" class="last-name" type="text" placeholder="last name" required />
+        </div>
+        <div class="divm">
+          <input name="customer[email]" class="email" type="text" placeholder="email" required />
+        </div>
+        <div class="divm">
+          <input name="customer[password]" class="password" type="text" placeholder="password" required />
+        </div>
+
+        <div class="login-box status login-box2">
+          <div class="alreadyhaveaccount">Already have an account?</div>
+          <div class="login"><a href="#">Log in</a></div>
+        </div>
+        <div class="or status or2">or</div>
+        <div class="loginbyathority status loginbyathority2">
+          <div class="authority"><img src="{{ 'social.png' | asset_url }}" alt="appleicon" /></div>
+          <div class="authority"><img src="{{ 'googlelogin.png' | asset_url }}" alt="googleicon" /></div>
+          <div class="authority"><img src="{{ 'facebookimage.png' | asset_url }}" alt="facebookicon" /></div>
+        </div>
+        <div class="termandcondition status termandcondition2">
+          By clicking register now you agree to terms& conditions and
+          privacy policy.
+        </div>
+        <button class="register-button">Register Now</button>
+      </form>
+      <div class="login-box status2">
+        <div class="alreadyhaveaccount">Already have an account?</div>
+        <div class="login"><a href="#">Log in</a></div>
+      </div>
+      <div class="or status2">or</div>
+      <div class="loginbyathority status2">
+        <div class="authority"><img src="{{ 'social.png' | asset_url }}" alt="appleicon" /></div>
+        <div class="authority"><img src="{{ 'googlelogin.png' | asset_url }}" alt="googleicon" /></div>
+        <div class="authority"><img src="{{ 'facebookimage.png' | asset_url }}" alt="facebookicon" /></div>
+      </div>
+      <div class="termandcondition status2">
+        By clicking register now you agree to terms& conditions and privacy
+        policy.
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+"name":"Singup-up-page",
+"settings":[
+
+{
+"type":"image_picker",
+"id":"singup-image",
+"label":"Chose-image"
+
+}
+]
+}
+
+{% endschema %}

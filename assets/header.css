@@ -354,12 +354,13 @@
   display: flex;
   align-items: center;
   border-bottom: 1px solid black;
+  gap:10px;
 }
-.search-icon {
+.search-block-search-icon{
   height: 24px;
   width: 24px;
   flex-shrink: 0;
-  background-color: gray;
+  
 }
 .search-input {
   flex-grow: 1;
@@ -375,5 +376,13 @@
 .search-input:focus {
   outline: none; /* removes the default blue border */
   border: none; /* makes sure no border shows */
+}
+.overlay22 .search-image{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  
 }
 

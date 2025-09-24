@@ -1,0 +1,88 @@
+{{ 'search.css' | asset_url | stylesheet_tag}}
+<div class="search-page-section">
+  <div class="search-block">
+    <form action="/search" method="get" role="search" class="search-bar">
+      <div class="search-icon"><img class="search-image" src="{{ 'search.png' | asset_url}}" alt=""></div>
+      <input class="search-input" type="search" name="q" placeholder="Search products..." aria-label="Search">
+      <input type="hidden" name="type" value="product">
+    </form>
+
+  </div>
+
+  <!-- Results Info -->
+  {% if search.performed %}
+  <div class="product-numberplusproduct-card-container">
+
+    <div class="product-number">
+      {{ search.results_count }} results
+    </div>
+
+    <div class="product-card-container">
+
+      {% for item in search.results %}
+      {% if item.object_type == 'product' %}
+      <div class="product-card">
+
+        <!-- Product Image -->
+        <div class="product-image">
+          <a href="{{ item.url }}">
+            {% if item.featured_image %}
+            <img src="{{ item.featured_image | img_url }}" alt="{{ item.title }}">
+            {% else %}
+            <img src="{{ 'no-image.png' | asset_url }}" alt="{{ item.title }}">
+            {% endif %}
+          </a>
+        </div>
+
+        <!-- Product Details -->
+        <div class="product-detail">
+          <div class="product-title-variant">
+            <div class="product-title">{{ item.title }}</div>
+            <div class="text-box">{{ item.vendor }}</div>
+
+
+            <div class="product-varient status2">
+              {% for option in item.options_with_values %}
+              {% if option.name == 'Color' %}
+              {% for value in option.values limit:3 %}
+              <div class="color1" style="background-color: {{ value | downcase }};"></div>
+              {% endfor %}
+              {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+
+          <!-- Price + mobile color status -->
+          <div class="product-price">
+            <div class="price">
+              {% if item.compare_at_price > item.price %}
+              <span class="old-price">{{ item.compare_at_price | money }}</span>
+              <span class="new-price">{{ item.price | money }}</span>
+              {% else %}
+              {{ item.price | money }}
+              {% endif %}
+            </div>
+
+            <!-- Mobile variant colors -->
+            <div class="product-varient status">
+              {% for option in item.options_with_values %}
+              {% if option.name == 'Color' %}
+              {% for value in option.values limit:3 %}
+              <div class="color1" style="background-color: {{ value | downcase }};"></div>
+              {% endfor %}
+              {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  {% if search.results_count == 0 %}
+  <p>No results found for “{{ search.terms }}”.</p>
+  {% endif %}
+  {% endif %}
+</div>
