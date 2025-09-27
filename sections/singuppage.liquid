@@ -1,4 +1,19 @@
 {{ 'signuppage.css' | asset_url | stylesheet_tag}}
+{{ 'signuppage.js' | asset_url | script_tag }}
+<div class="email-adress-notification">
+      <div class="cross-icon"><img src=" {{ 'close.png' | asset_url }}" alt="cross-icon" /></div>
+      <div class="massage-container">
+        <div class="massage-title">verify your email address</div>
+        <div class="email-adress-sent">
+          We’ve sent an email to nina@gmail.com to verify your email address and
+          activate your account. the link in the email will expire in 24 hours.
+        </div>
+        <div class="click-to-get-email-again">
+          Click here if you did not receive an email or would like to change the
+          email address you registered with
+        </div>
+      </div>
+    </div>
 <div class="singup-section">
   <div class="image-signupform-container">
     <div class="image-box">
@@ -53,6 +68,7 @@
     </div>
   </div>
 </div>
+
 {% schema %}
 {
 "name":"Singup-up-page",
