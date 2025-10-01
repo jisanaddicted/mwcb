@@ -1,290 +1,336 @@
-{{ 'productpage.css' | asset_url | stylesheet_tag}}
-<div class="product-page-scratch">
-  <div class="directory-name">
+ {{ 'productpage.css' | asset_url | stylesheet_tag }}
+ <div class="scratch-product-page">
+      <div class="directory-name">
+        <div class="home">Home</div>
+        <div class="slash">/</div>
+        <div class="shopall">Shop All</div>
+      </div>
+      <div class="product-banner">
+        <img class="product-image" src="" alt="" />
+      </div>
+      <div class="filter-and-productcard">
+        <div class="filter">
+          <div class="title">Filters</div>
+          <div class="filter-box">
+            <div class="sort-by">
+              <div class="wrapper">
+                <div class="text">sort-by</div>
+                <div class="plus-button"></div>
+              </div>
+            </div>
+            <div class="openshortbywrapper status1">
+              <div class="open-sort-by">
+                <div class="open-wrapper">
+                  <div class="open-text">sort-by</div>
+                  <div class="open-plus-button"></div>
+                </div>
+              </div>
+              <div class="open-details">
+                <div class="checkboxes">
+                  <label class="label"
+                    ><input type="checkbox" value="Featured " /> Featured
+                  </label>
+                </div>
+                <div class="checkboxes">
+                  <label class="label"
+                    ><input type="checkbox" value="Best Seller" /> Best
+                    Seller</label
+                  >
+                </div>
+                <div class="checkboxes">
+                  <label class="label"
+                    ><input type="checkbox" value="Price: Low To Hight" />
+                    Price: Low To Hight</label
+                  >
+                </div>
+                <div class="checkboxes">
+                  <label class="label"
+                    ><input type="checkbox" value="Price: Hight To Low" />
+                    Price: Hight To Low</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="size">
+              <div class="wrapper">
+                <div class="text">size</div>
+                <div class="plus-button"></div>
+              </div>
+            </div>
+            <div class="openshortbywrapper status2">
+              <div class="open-sort-by">
+                <div class="open-wrapper">
+                  <div class="open-text">size</div>
+                  <div class="open-plus-button"></div>
+                </div>
+              </div>
+              <div class="open-details">
+                <div class="checkboxes">
+                  <label class="label"
+                    ><input type="checkbox" value="Featured " /> Featured
+                  </label>
+                </div>
+                <div class="checkboxes">
+                  <label class="label"
+                    ><input type="checkbox" value="Best Seller" /> Best
+                    Seller</label
+                  >
+                </div>
+                <div class="checkboxes">
+                  <label class="label"
+                    ><input type="checkbox" value="Price: Low To Hight" />
+                    Price: Low To Hight</label
+                  >
+                </div>
+                <div class="checkboxes">
+                  <label class="label"
+                    ><input type="checkbox" value="Price: Hight To Low" />
+                    Price: Hight To Low</label
+                  >
+                </div>
+              </div>
+            </div>
 
-    <div class="home">
-      <a href="{{ routes.root_url }}">Home</a>
-    </div>
-
-
-    <div class="slash">/</div>
-
-    {% if collection %}
-
-    <div class="collection">
-      <a href="{{ collection.url }}">{{ collection.title }}</a>
-    </div>
-    {% elsif product %}
-
-    {% if collection %}
-    <div class="collection">
-      <a href="{{ collection.url }}">{{ collection.title }}</a>
-    </div>
-    <div class="slash">/</div>
-    {% else %}
-    <div class="shopall">
-      <a href="{{ collections.all.url }}">Shop All</a>
-    </div>
-    <div class="slash">/</div>
-    {% endif %}
-    <div class="product">{{ product.title }}</div>
-    {% else %}
-
-    <div class="shopall">
-      <a href="{{ collections.all.url }}">Shop All</a>
-    </div>
-    {% endif %}
-  </div>
-
-  <div class="product-banner">
-    <img class="product-image" src="{{ section.settings.banner_image | image_url}}" alt="" />
-  </div>
-  <div class="filter-and-productcard">
-    <div class="filter">
-      <div class="title">Filters</div>
-      <div class="filter-box">
-        <div class="sort-by">
-          <div class="wrapper">
-            <div class="text">sort-by</div>
-            <div class="plus-button"></div>
+            <div class="color">
+              <div class="wrapper">
+                <div class="text">color</div>
+                <div class="plus-button"></div>
+              </div>
+            </div>
+            <div class="openshortbywrapper status3">
+              <div class="open-sort-by">
+                <div class="open-wrapper">
+                  <div class="open-text">color</div>
+                  <div class="open-plus-button"></div>
+                </div>
+              </div>
+              <div class="open-details">
+                <div class="checkboxes">
+                  <label class="label"
+                    ><input type="checkbox" value="Featured " /> Featured
+                  </label>
+                </div>
+                <div class="checkboxes">
+                  <label class="label"
+                    ><input type="checkbox" value="Best Seller" /> Best
+                    Seller</label
+                  >
+                </div>
+                <div class="checkboxes">
+                  <label class="label"
+                    ><input type="checkbox" value="Price: Low To Hight" />
+                    Price: Low To Hight</label
+                  >
+                </div>
+                <div class="checkboxes">
+                  <label class="label"
+                    ><input type="checkbox" value="Price: Hight To Low" />
+                    Price: Hight To Low</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="collection status4">
+              <div class="wrapper">
+                <div class="text">collection</div>
+                <div class="plus-button"></div>
+              </div>
+            </div>
+            <div class="openshortbywrapper status5">
+              <div class="open-sort-by">
+                <div class="open-wrapper">
+                  <div class="open-text">collection</div>
+                  <div class="open-plus-button"></div>
+                </div>
+              </div>
+              <div class="open-details">
+                <div class="checkboxes">
+                  <label class="label"
+                    ><input type="checkbox" value="Featured " /> Featured
+                  </label>
+                </div>
+                <div class="checkboxes">
+                  <label class="label"
+                    ><input type="checkbox" value="Best Seller" /> Best
+                    Seller</label
+                  >
+                </div>
+                <div class="checkboxes">
+                  <label class="label"
+                    ><input type="checkbox" value="Price: Low To Hight" />
+                    Price: Low To Hight</label
+                  >
+                </div>
+                <div class="checkboxes">
+                  <label class="label"
+                    ><input type="checkbox" value="Price: Hight To Low" />
+                    Price: Hight To Low</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="fabric">
+              <div class="wrapper">
+                <div class="text">fabric</div>
+                <div class="plus-button"></div>
+              </div>
+            </div>
+            <div class="openshortbywrapper status6">
+              <div class="open-sort-by">
+                <div class="open-wrapper">
+                  <div class="open-text">fabric</div>
+                  <div class="open-plus-button"></div>
+                </div>
+              </div>
+              <div class="open-details">
+                <div class="checkboxes">
+                  <label class="label"
+                    ><input type="checkbox" value="Featured " /> Featured
+                  </label>
+                </div>
+                <div class="checkboxes">
+                  <label class="label"
+                    ><input type="checkbox" value="Best Seller" /> Best
+                    Seller</label
+                  >
+                </div>
+                <div class="checkboxes">
+                  <label class="label"
+                    ><input type="checkbox" value="Price: Low To Hight" />
+                    Price: Low To Hight</label
+                  >
+                </div>
+                <div class="checkboxes">
+                  <label class="label"
+                    ><input type="checkbox" value="Price: Hight To Low" />
+                    Price: Hight To Low</label
+                  >
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="openshortbywrapper status1">
-          <div class="open-sort-by">
-            <div class="open-wrapper">
-              <div class="open-text">sort-by</div>
-              <div class="open-plus-button"></div>
+        <div class="product-container">
+          <div class="product-card">
+            <div class="product-image">
+              <img src="" alt="" />
+            </div>
+            <div class="product-detail">
+              <div class="product-title-variant">
+                <div class="product-title"></div>
+                <div class="text-box"></div>
+                <div class="product-varient status2">
+                  <div class="color1"></div>
+                  <div class="color2"></div>
+                  <div class="color3"></div>
+                </div>
+              </div>
+              <div class="product-price">
+                <div class="price"></div>
+                <div class="product-varient status">
+                  <div class="color1"></div>
+                  <div class="color2"></div>
+                  <div class="color3"></div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="open-details">
-            <div class="checkboxes">
-              <label class="label"><input type="checkbox" value="Featured " /> Featured
-              </label>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="" alt="" />
             </div>
-            <div class="checkboxes">
-              <label class="label"><input type="checkbox" value="Best Seller" /> Best
-                Seller</label>
-            </div>
-            <div class="checkboxes">
-              <label class="label"><input type="checkbox" value="Price: Low To Hight" />
-                Price: Low To Hight</label>
-            </div>
-            <div class="checkboxes">
-              <label class="label"><input type="checkbox" value="Price: Hight To Low" />
-                Price: Hight To Low</label>
-            </div>
-          </div>
-        </div>
-        <div class="size">
-          <div class="wrapper">
-            <div class="text">size</div>
-            <div class="plus-button"></div>
-          </div>
-        </div>
-        <div class="openshortbywrapper status2">
-          <div class="open-sort-by">
-            <div class="open-wrapper">
-              <div class="open-text">size</div>
-              <div class="open-plus-button"></div>
+            <div class="product-detail">
+              <div class="product-title-variant">
+                <div class="product-title"></div>
+                <div class="text-box"></div>
+                <div class="product-varient status2">
+                  <div class="color1"></div>
+                  <div class="color2"></div>
+                  <div class="color3"></div>
+                </div>
+              </div>
+              <div class="product-price">
+                <div class="price"></div>
+                <div class="product-varient status">
+                  <div class="color1"></div>
+                  <div class="color2"></div>
+                  <div class="color3"></div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="open-details">
-            <div class="checkboxes">
-              <label class="label"><input type="checkbox" value="Featured " /> Featured
-              </label>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="" alt="" />
             </div>
-            <div class="checkboxes">
-              <label class="label"><input type="checkbox" value="Best Seller" /> Best
-                Seller</label>
-            </div>
-            <div class="checkboxes">
-              <label class="label"><input type="checkbox" value="Price: Low To Hight" />
-                Price: Low To Hight</label>
-            </div>
-            <div class="checkboxes">
-              <label class="label"><input type="checkbox" value="Price: Hight To Low" />
-                Price: Hight To Low</label>
-            </div>
-          </div>
-        </div>
-
-        <div class="color">
-          <div class="wrapper">
-            <div class="text">color</div>
-            <div class="plus-button"></div>
-          </div>
-        </div>
-        <div class="openshortbywrapper status3">
-          <div class="open-sort-by">
-            <div class="open-wrapper">
-              <div class="open-text">color</div>
-              <div class="open-plus-button"></div>
+            <div class="product-detail">
+              <div class="product-title-variant">
+                <div class="product-title"></div>
+                <div class="text-box"></div>
+                <div class="product-varient status2">
+                  <div class="color1"></div>
+                  <div class="color2"></div>
+                  <div class="color3"></div>
+                </div>
+              </div>
+              <div class="product-price">
+                <div class="price"></div>
+                <div class="product-varient status">
+                  <div class="color1"></div>
+                  <div class="color2"></div>
+                  <div class="color3"></div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="open-details">
-            <div class="checkboxes">
-              <label class="label"><input type="checkbox" value="Featured " /> Featured
-              </label>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="" alt="" />
             </div>
-            <div class="checkboxes">
-              <label class="label"><input type="checkbox" value="Best Seller" /> Best
-                Seller</label>
-            </div>
-            <div class="checkboxes">
-              <label class="label"><input type="checkbox" value="Price: Low To Hight" />
-                Price: Low To Hight</label>
-            </div>
-            <div class="checkboxes">
-              <label class="label"><input type="checkbox" value="Price: Hight To Low" />
-                Price: Hight To Low</label>
-            </div>
-          </div>
-        </div>
-        <div class="collection status4">
-          <div class="wrapper">
-            <div class="text">collection</div>
-            <div class="plus-button"></div>
-          </div>
-        </div>
-        <div class="openshortbywrapper status5">
-          <div class="open-sort-by">
-            <div class="open-wrapper">
-              <div class="open-text">collection</div>
-              <div class="open-plus-button"></div>
+            <div class="product-detail">
+              <div class="product-title-variant">
+                <div class="product-title"></div>
+                <div class="text-box"></div>
+                <div class="product-varient status2">
+                  <div class="color1"></div>
+                  <div class="color2"></div>
+                  <div class="color3"></div>
+                </div>
+              </div>
+              <div class="product-price">
+                <div class="price"></div>
+                <div class="product-varient status">
+                  <div class="color1"></div>
+                  <div class="color2"></div>
+                  <div class="color3"></div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="open-details">
-            <div class="checkboxes">
-              <label class="label"><input type="checkbox" value="Featured " /> Featured
-              </label>
+          <div class="product-card">
+            <div class="product-image">
+              <img src="" alt="" />
             </div>
-            <div class="checkboxes">
-              <label class="label"><input type="checkbox" value="Best Seller" /> Best
-                Seller</label>
-            </div>
-            <div class="checkboxes">
-              <label class="label"><input type="checkbox" value="Price: Low To Hight" />
-                Price: Low To Hight</label>
-            </div>
-            <div class="checkboxes">
-              <label class="label"><input type="checkbox" value="Price: Hight To Low" />
-                Price: Hight To Low</label>
-            </div>
-          </div>
-        </div>
-        <div class="fabric">
-          <div class="wrapper">
-            <div class="text">fabric</div>
-            <div class="plus-button"></div>
-          </div>
-        </div>
-        <div class="openshortbywrapper status6">
-          <div class="open-sort-by">
-            <div class="open-wrapper">
-              <div class="open-text">fabric</div>
-              <div class="open-plus-button"></div>
-            </div>
-          </div>
-          <div class="open-details">
-            <div class="checkboxes">
-              <label class="label"><input type="checkbox" value="Featured " /> Featured
-              </label>
-            </div>
-            <div class="checkboxes">
-              <label class="label"><input type="checkbox" value="Best Seller" /> Best
-                Seller</label>
-            </div>
-            <div class="checkboxes">
-              <label class="label"><input type="checkbox" value="Price: Low To Hight" />
-                Price: Low To Hight</label>
-            </div>
-            <div class="checkboxes">
-              <label class="label"><input type="checkbox" value="Price: Hight To Low" />
-                Price: Hight To Low</label>
+            <div class="product-detail">
+              <div class="product-title-variant">
+                <div class="product-title"></div>
+                <div class="text-box"></div>
+                <div class="product-varient status2">
+                  <div class="color1"></div>
+                  <div class="color2"></div>
+                  <div class="color3"></div>
+                </div>
+              </div>
+              <div class="product-price">
+                <div class="price"></div>
+                <div class="product-varient status">
+                  <div class="color1"></div>
+                  <div class="color2"></div>
+                  <div class="color3"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-  </div>
-  <div class="product-container">
-    {% paginate collections.all.products by 20 %}
-    {% for product in collections.all.products %}
-    <div class="product-card">
-
-
-      <div class="product-image">
-        <a href="{{ product.url }}">
-          <img src="{{ product.featured_image | image_url }}" alt="{{ product.title | escape }}" loading="lazy" />
-        </a>
-      </div>
-
-
-      <div class="product-detail">
-
-        <div class="product-title-variant">
-          <a class="product-title" href="{{ product.url }}">
-            {{ product.title }}
-          </a>
-          <div class="text-box">
-            {% if product.vendor %}
-            <span class="vendor">{{ product.vendor }}</span>
-            {% endif %}
-          </div>
-        </div>
-
-
-        <div class="product-price">
-          {% if product.compare_at_price > product.price %}
-          <span class="old-price">{{ product.compare_at_price | money }}</span>
-          <span class="current-price">{{ product.price | money }}</span>
-          {% else %}
-          <span class="current-price">{{ product.price | money }}</span>
-          {% endif %}
-        </div>
-
-
-        {% assign color_option_index = product.options_with_values | map: 'name' | join: ',' | downcase | split: ',' |
-        index_of: 'color' %}
-        {% if color_option_index != -1 %}
-        <div class="product-variant status">
-          {% for variant in product.variants %}
-          {% assign color = variant.options[color_option_index] %}
-          <span class="color-swatch" style="background-color: {{ color | downcase }};" title="{{ color }}">
-          </span>
-          {% endfor %}
-        </div>
-        {% endif %}
-
-      </div>
-    </div>
-    {% endfor %}
-    {{ paginate | default_pagination }}
-    {% endpaginate %}
-
-
-
-  </div>
-</div>
-</div>
-
-{% schema %}
-{
-"name":"Product_page",
-"settings":[
-{
-"type":"header",
-"content":"Banner Image"
-},
-
-{
-"type":"image_picker",
-"id":"banner_image",
-"label":"Banner Image",
-
-}
-]
-
-}
-{% endschema %}
