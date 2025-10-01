@@ -1,0 +1,310 @@
+.product-page-scratch * {
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+.product-page-scratch .directory-name {
+  height: 40px;
+  min-width: 494px;
+  display: flex;
+  margin-left: clamp(20px, calc(20px + (100vw - 350px) * 0.13134), 108px);
+}
+.product-page-scratch .home {
+  width: 88px;
+  height: 100%;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-page-scratch .slash {
+  height: 40px;
+  width: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-page-scratch .shopall {
+  width: 107px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+.product-page-scratch .product-banner {
+  width: 100%;
+  height: 655px;
+  margin-top: 48px;
+}
+.product-page-scratch .product-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+.product-page-scratch .filter-and-productcard {
+  margin: 0 clamp(20px, calc(20px + (100vw - 350px) * 0.13134), 108px);
+  margin-top: 48px;
+  margin-bottom: 48px;
+  display: flex;
+  gap: 24px;
+}
+.product-page-scratch .filter {
+  height: 357px;
+  flex: 1 1 392px;
+  
+}
+.product-page-scratch .product-container {
+  flex: 1 1 808px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(392px, 1fr));
+  gap: 24px;
+  background-color: gray;
+}
+.product-page-scratch .product-card {
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+.product-page-scratch .title {
+  height: 45px;
+  width: 103px;
+  font-size: 32px;
+}
+.product-page-scratch .filter-box {
+  height: 296px;
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+.product-page-scratch .filter-box > * {
+  height: 48px;
+  width: 100%;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  background-color: #748C70;
+}
+.product-page-scratch .filter-box .wrapper {
+  width: 100%;
+  height: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.product-page-scratch .wrapper .text {
+  flex: 1;
+  height: 22px;
+  font-size: 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+
+}
+.product-page-scratch .plus-button {
+  width: 14px;
+  height: 14px;
+}
+/* product card styles */
+.product-page-scratch .product-card {
+  height: 540px;
+  width: 392px;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-page-scratch .product-detail {
+  height: 102px;
+  width: 100%;
+  display: flex;
+}
+.product-page-scratch .product-title-variant {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.product-page-scratch .product-title {
+  height: 22px;
+  font-size: 16px;
+  width: 100%;
+}
+.product-page-scratch .text-box {
+  height: 29px;
+  width: 100%;
+  font-size: 16px;
+}
+.product-page-scratch .product-varient {
+  height: 24px;
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.product-page-scratch .color1 {
+  height: 24px;
+  width: 24px;
+  border-radius: 50px;
+  background-color: rgb(216, 250, 64);
+}
+.product-page-scratch .color2 {
+  height: 24px;
+  width: 24px;
+  border-radius: 50px;
+  background-color: rgb(192, 33, 33);
+}
+.product-page-scratch .color3 {
+  height: 24px;
+  width: 24px;
+  border-radius: 50px;
+  background-color: rgb(20, 179, 55);
+}
+.product-page-scratch .product-price {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.product-page-scratch .price {
+  height: 22px;
+  font-size: 16px;
+  margin-right: 8px;
+}
+.product-page-scratch .status {
+  display: none;
+}
+/* responsive styles */
+@media (max-width: 750px) {
+  .product-page-scratch .filter-and-productcard {
+    flex-direction: column;
+  }
+  .product-page-scratch .product-container {
+    padidng: 0 auto;
+    flex: 1 1 808px;
+    display: flex;
+    gap: 24px;
+    background-color: gray;
+    flex-wrap: wrap;
+  }
+  .product-page-scratch .product-card {
+    height: 333px;
+    width: 152px;
+  }
+  .product-page-scratch .product-image {
+    width: 152px;
+    height: 213px;
+  }
+  .product-page-scratch .product-detail {
+    height: 112px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .product-page-scratch .product-title-variant {
+    height: 50%;
+    width: 100%;
+    display: flex;
+  }
+  .product-page-scratch .product-title {
+    height: 20px;
+    font-size: 14px;
+  }
+  .product-page-scratch .text-box {
+    height: 20px;
+    font-size: 14px;
+  }
+  .product-page-scratch .product-price {
+    position: relative;
+    height: 50%;
+    width: 100%;
+  }
+  .product-page-scratch .price {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 20px;
+    font-size: 14px;
+  }
+  .product-page-scratch .status {
+    display: flex;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+  }
+  .product-page-scratch .status2 {
+    display: none;
+  }
+  .product-page-scratch .color1,
+  .product-page-scratch .color2,
+  .product-page-scratch .color3 {
+    height: 16px;
+    width: 16px;
+  }
+}
+.product-page-scratch .product-card {
+  margin: 0 auto;
+}
+.product-page-scratch .product-image a img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  
+}
+ img{
+  height:100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  
+}
+/* open sort by starts from here */
+.openwrapper {
+  display: flex;
+  flex-direction: column;
+}
+.open-details {
+  width: 100%;
+  padding: 16px;
+}
+.checkboxes {
+  height: 29px;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.label {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+.open-sort-by {
+  height: 48px;
+  width: 100%;
+  padding: 0 16px;
+  display: flex;
+  margin-top: 16px;
+  align-items: center;
+}
+.filter-box .open-wrapper {
+  width: 100%;
+  height: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper .open-text {
+  flex: 1;
+  height: 22px;
+  font-size: 16px;
+}
+.open-plus-button {
+  width: 14px;
+  height: 14px;
+}
