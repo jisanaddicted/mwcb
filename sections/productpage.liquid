@@ -1,12 +1,15 @@
  {{ 'productpage.css' | asset_url | stylesheet_tag }}
+ 
  <div class="scratch-product-page">
       <div class="directory-name">
-        <div class="home">Home</div>
+        <a href="{{routes.root_url}}">
+          <div class="home">Home</div>
+        </a>
         <div class="slash">/</div>
-        <div class="shopall">Shop All</div>
+        <a href="{{ routes.all_products_collection_url }}"><div class="shopall">Shop All</div></a>
       </div>
       <div class="product-banner">
-        <img class="product-image" src="" alt="" />
+        <img class="product-image" src="{{ section.settings.product_banner | image_url }}" alt="" />
       </div>
       <div class="filter-and-productcard">
         <div class="filter">
@@ -15,14 +18,14 @@
             <div class="sort-by">
               <div class="wrapper">
                 <div class="text">sort-by</div>
-                <div class="plus-button"></div>
+                <div class="plus-button status11"><img  src="{{ 'Vector.png' | asset_url }}" alt=""></div>
               </div>
             </div>
-            <div class="openshortbywrapper status1">
-              <div class="open-sort-by">
+            <div class="openshortbywrapper status1 ">
+              <div class="open-sort-by ">
                 <div class="open-wrapper">
                   <div class="open-text">sort-by</div>
-                  <div class="open-plus-button"></div>
+                  <div class="open-plus-button closebutton1"><img src="{{ 'minimize.png' | asset_url }}" alt=""></div>
                 </div>
               </div>
               <div class="open-details">
@@ -54,14 +57,14 @@
             <div class="size">
               <div class="wrapper">
                 <div class="text">size</div>
-                <div class="plus-button"></div>
+                <div class="plus-button"><img src="{{ 'Vector.png' | asset_url }}" alt=""></div>
               </div>
             </div>
             <div class="openshortbywrapper status2">
               <div class="open-sort-by">
                 <div class="open-wrapper">
                   <div class="open-text">size</div>
-                  <div class="open-plus-button"></div>
+                  <div class="open-plus-button closebutton2"><img src="{{ 'minimize.png' | asset_url }}" alt=""></div>
                 </div>
               </div>
               <div class="open-details">
@@ -94,14 +97,14 @@
             <div class="color">
               <div class="wrapper">
                 <div class="text">color</div>
-                <div class="plus-button"></div>
+                <div class="plus-button"><img src="{{ 'Vector.png' | asset_url }}" alt=""></div>
               </div>
             </div>
             <div class="openshortbywrapper status3">
               <div class="open-sort-by">
                 <div class="open-wrapper">
                   <div class="open-text">color</div>
-                  <div class="open-plus-button"></div>
+                  <div class="open-plus-button closebutton3"><img src="{{ 'minimize.png' | asset_url }}" alt=""></div>
                 </div>
               </div>
               <div class="open-details">
@@ -133,14 +136,14 @@
             <div class="collection status4">
               <div class="wrapper">
                 <div class="text">collection</div>
-                <div class="plus-button"></div>
+                <div class="plus-button"><img src="{{ 'Vector.png' | asset_url }}" alt=""></div>
               </div>
             </div>
             <div class="openshortbywrapper status5">
               <div class="open-sort-by">
                 <div class="open-wrapper">
                   <div class="open-text">collection</div>
-                  <div class="open-plus-button"></div>
+                  <div class="open-plus-button closebutton4"><img src="{{ 'minimize.png' | asset_url }}" alt=""></div>
                 </div>
               </div>
               <div class="open-details">
@@ -172,20 +175,20 @@
             <div class="fabric">
               <div class="wrapper">
                 <div class="text">fabric</div>
-                <div class="plus-button"></div>
+                <div class="plus-button"><img src="{{ 'Vector.png' | asset_url }}" alt=""></div>
               </div>
             </div>
             <div class="openshortbywrapper status6">
               <div class="open-sort-by">
                 <div class="open-wrapper">
                   <div class="open-text">fabric</div>
-                  <div class="open-plus-button"></div>
+                  <div class="open-plus-button closebutton5"><img src="{{ 'minimize.png' | asset_url }}" alt=""></div>
                 </div>
               </div>
               <div class="open-details">
                 <div class="checkboxes">
                   <label class="label"
-                    ><input type="checkbox" value="Featured " /> Featured
+                    ><input type="checkbox" value="Featured" /> Featured
                   </label>
                 </div>
                 <div class="checkboxes">
@@ -334,3 +337,21 @@
         </div>
       </div>
     </div>
+    {{ 'productpage.js' | asset_url | script_tag}}
+
+    {% schema %}
+    {
+      "name":"product-page",
+      "settings":[
+      {
+        "type":"image_picker",
+        "id":"product_banner",
+        "label":"product banner",
+        
+
+      }
+      ]
+    }
+    
+    
+    {% endschema %}

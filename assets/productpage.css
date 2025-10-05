@@ -40,6 +40,7 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
 }
 .scratch-product-page .filter-and-productcard {
@@ -69,6 +70,9 @@
   height: 45px;
   width: 103px;
   font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .scratch-product-page .filter-box {
   width: 100%;
@@ -93,15 +97,26 @@
   display: flex;
   margin-top: 16px;
   align-items: center;
+  background-color: #748C70;
+  color: white;
 }
+
 .scratch-product-page .wrapper .text {
   flex: 1;
   height: 22px;
   font-size: 16px;
+  display: flex;
+  
+  
+  align-items: center;
 }
 .scratch-product-page .plus-button {
   width: 14px;
   height: 14px;
+}
+.scratch-product-page .plus-button img {
+  width: 100%;
+  height: 100%;
 }
 /* product card styles */
 .scratch-product-page .product-card {
@@ -110,10 +125,7 @@
   display: flex;
   flex-direction: column;
 }
-.scratch-product-page .product-image {
-  width: 392px;
-  height: 438px;
-}
+
 .scratch-product-page .product-detail {
   height: 102px;
   width: 100%;
@@ -289,8 +301,67 @@
   flex: 1;
   height: 22px;
   font-size: 16px;
+  display: flex;
+  align-items: center;
 }
 .scratch-product-page .open-plus-button {
   width: 14px;
   height: 14px;
 }
+.scratch-product-page .open-plus-button img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.scratch-product-page .plus-button img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.directory-name a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+.status1,
+.status2,
+.status3,
+.status4,
+.status5,
+.status6 {
+  display: none;
+
+}
+.scratch-product-page .sort-by{
+  display: flex;
+
+}
+.scratch-product-page .size{
+  display: flex;
+
+}
+.scratch-product-page .color{
+  display: flex;
+
+}
+.scratch-product-page .collection{
+  display: flex;
+
+}
+.scratch-product-page .fabric{
+  display: flex;
+
+}
+
+
+
+
+
